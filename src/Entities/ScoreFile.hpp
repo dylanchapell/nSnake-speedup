@@ -39,6 +39,10 @@ struct ScoreEntry
 	/// How many fruits at once were allowed on this level.
 	int fruits;
 
+	//How many fruits the user has eaten so far
+	//Used to calculate speed increases
+	int fruits_eaten;
+
 	/// If random walls were spawned on this level.
 	bool random_walls;
 

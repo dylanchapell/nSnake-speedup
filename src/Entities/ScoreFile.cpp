@@ -19,6 +19,7 @@ ScoreEntry::ScoreEntry():
 	speed(0),
 	level(""),
 	fruits(0),
+	fruits_eaten(0),
 	random_walls(false),
 	teleport(false),
 	board_size(Globals::Game::LARGE),

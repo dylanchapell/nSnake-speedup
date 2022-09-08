@@ -277,11 +277,15 @@ void Game::update()
 			while (this->fruits->eatenFruit(this->player))
 			{
 				this->player->increase();
-
+				this->currentScore->fruits_eaten+=1;
 				// Score formula is kinda random and
 				// scattered all over this file.
 				// TODO: Center it all on the Score class.
 				this->currentScore->points += this->currentScore->speed * 2;
+				//first try updating speed
+				if(this->currentScore->fruits_eaten %2 ==0) {
+					this->currentScore->speed +=1;
+				}
 			}
 
 			this->fruits->update(this->player, this->board);
